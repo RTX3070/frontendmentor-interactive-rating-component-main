@@ -1,0 +1,172 @@
+@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap');
+
+:root {
+    --orange: hsl(25, 97%, 53%);
+    --white: hsl(0, 0%, 100%);
+    --light-grey: hsl(217, 12%, 63%);
+    --medium-grey: hsl(216, 12%, 54%);
+    --dark-blue: hsl(213, 19%, 18%);
+    --very-dark-blue: hsl(216, 12%, 8%);
+}
+
+*, ::after, ::before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--very-dark-blue);
+    color: var(--light-grey);
+    font-family: 'Overpass', sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    height: 100vh;
+}
+
+main {
+    height: 100vh;
+}
+
+.card {
+    background-color: var(--dark-blue);
+    border-radius: 15px;
+    margin: auto;
+    padding: 25px;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 345px;
+}
+
+.star {
+    align-items: center;
+    background-color: hsla(216, 12%, 54%, 0.15);
+    border-radius: 50%;
+    display: flex;
+    height: 35px;
+    justify-content: center;
+    width: 35px;
+}
+
+.card h1 {
+    color: var(--white);
+}
+
+.card h1 {
+    font-size: 24px;
+    margin: 18px 0 13px 0;
+}
+
+.card .rating {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    margin: 30px 0 20px 0;
+}
+
+.card .rating .score {
+    align-items: center;
+    background-color: hsla(216, 12%, 54%, 0.15);
+    border-radius: 50%;
+    cursor: pointer;
+    display: inline-flex;
+    height: 50px;
+    justify-content: center;
+    transition: background-color .3s ease-in-out;
+    width: 50px;
+}
+
+.card .rating .score:hover {
+    background-color: var(--light-grey);
+    color: var(--white);
+}
+
+.card .rating .score.selected {
+    background-color: var(--orange);
+    color: var(--white);
+}
+
+.card .submit-btn {
+    background-color: var(--orange);
+    border: none;
+    border-radius: 50px;
+    color: var(--white);
+    cursor: pointer;
+    display: block;
+    font-family: 'Overpass', sans-serif;
+    font-size: 15px;
+    margin-bottom: 8px;
+    padding: 15px 0 9px 0;
+    text-transform: uppercase;
+    transition: background-color .3s ease-in-out;
+    width: 100%;
+}
+
+.card .submit-btn:hover {
+    background-color: var(--white);
+    color: var(--orange);
+}
+
+.thankyou-card {
+    background-color: var(--dark-blue);
+    border-radius: 15px;
+    display: none;
+    left: 0;
+    padding: 35px 25px 25px 25px;
+    position: absolute;
+    text-align: center;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+}
+
+.thankyou-card.show {
+    display: block;
+}
+
+.thank-you {
+    display: block;
+    margin: auto;
+}
+
+.thankyou-card h2 {
+    color: var(--white);
+}
+
+.result {
+    background-color: hsla(216, 12%, 54%, 0.15);
+    border-radius: 50px;
+    color: var(--orange);
+    margin: 25px auto 30px auto;
+    padding: 7px 0 4px 0;
+    width: 175px;
+}
+
+.message {
+    margin-top: 15px;
+}
+
+.attribution {
+    color: var(--light-grey);
+    font-size: 10px;
+    position: sticky;
+    text-align: center;
+    top: 100vh;
+}
+
+.attribution a {
+    color: var(--light-grey);
+    text-decoration: none;
+    transition: color .3s ease-in-out;
+}
+
+.attribution a:active, .attribution a:hover {
+    color: var(--orange);
+}
+
+@media screen and (min-width: 1440px) {
+    .card {
+        width: 375px;
+    }
+}
